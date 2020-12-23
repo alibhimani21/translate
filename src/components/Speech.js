@@ -13,13 +13,11 @@ const styles = StyleSheet.create({
   }
 })
 
-export default function Details ({ navigation }) {
+export default function Speech ({ navigation }) {
   return (
     <View style={styles.container}>
-      <Text style={styles.font}>Details</Text>
-      <Button onPress={() => navigation.navigate('Text')} title="Text"></Button>
-      <Button onPress={() => navigation.navigate('Home')} title="Home"></Button>
-
+      <Text style={styles.font}>Speech</Text>
+      <Button onPress={() => navigation.navigate('Text')} title="Submit recording"></Button>
     </View>
   )
 }

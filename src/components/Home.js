@@ -18,7 +18,8 @@ export default function Home({ navigation }) {
     <View style={styles.container}>
       <Text style={styles.font}>Homepage</Text>
       <Button onPress={() => navigation.navigate('Text')} title="Text"></Button>
-      <Button onPress={() => navigation.navigate('Details')} title="Details"></Button>
+      <Button onPress={() => navigation.navigate('Speech')} title="Speech"></Button>
+      <Button onPress={() => navigation.navigate('Camera')} title="Camera"></Button>
     </View>
   )
 }
