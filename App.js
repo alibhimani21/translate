@@ -1,4 +1,5 @@
 import React from 'react'
+import { StatusBar } from 'react-native'
 import { createStackNavigator } from '@react-navigation/stack'
 import { NavigationContainer } from '@react-navigation/native'
 import Home from './src/components/Home'
@@ -11,11 +12,41 @@ const Stack = createStackNavigator()
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Details">
-        <Stack.Screen name="Home" component={Home} />
-        <Stack.Screen name="Text" component={Text} />
-        <Stack.Screen name="Speech" component={Speech} />
-        <Stack.Screen name="Camera" component={Camera} />
+      <StatusBar barStyle='light-content'/>
+      <Stack.Navigator
+        screenOptions={{
+          headerStyle: {
+            backgroundColor: '#222222',
+            borderColor: '#222222',
+            borderBottomColor: '#222222',
+            shadowColor: '#222222'
+          },
+          headerTintColor: '#ff5f5c'
+        }}>
+        <Stack.Screen
+          name="Home"
+          component={Home}
+          options={{
+            title: ''
+          }} />
+        <Stack.Screen
+          name="Text"
+          component={Text}
+          options={{
+            title: ''
+          }} />
+        <Stack.Screen
+          name="Speech"
+          component={Speech}
+          options={{
+            title: ''
+          }} />
+        <Stack.Screen
+          name="Camera"
+          component={Camera}
+          options={{
+            title: ''
+          }} />
       </Stack.Navigator>
     </NavigationContainer>
   )
