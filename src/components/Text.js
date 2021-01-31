@@ -30,9 +30,9 @@ export default function Text({ navigation }) {
             style={[isFocused ? styles.inputOnFocus : styles.input]}
             returnKeyType={'done'}
             keyboardAppearance={'dark'}
-            onFocus={() => setFocus({ isFocused: true })}
+            onFocus={() => setFocus(true)}
             onBlur={() => {
-              setFocus({ isFocused: false })
+              setFocus(false)
               console.log('blurred')
             }
             }
